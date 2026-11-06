@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>格林达姆 — 隐私政策</title>
+<style>
+  :root { --ink:#25415a; --muted:#5b7386; --line:#e2ecf3; --accent:#1b5e96; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 72px;
+    font: 15px/1.85 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    background: linear-gradient(180deg, #eef7fd 0%, #f7fbfe 320px, #fff 321px);
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 26px; color: var(--accent); margin: 0 0 6px; letter-spacing: 1px; }
+  .meta { color: #93a8b8; font-size: 13px; margin-bottom: 28px; }
+  h2 { font-size: 16px; margin: 30px 0 10px; color: var(--accent); }
+  p, li { color: var(--ink); }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  hr { border: none; border-top: 1px dashed var(--line); margin: 34px 0; }
+  code { background: #f2f7fb; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  .note { background: #f4f9fd; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  footer { margin-top: 40px; color: #93a8b8; font-size: 12px; border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>隐私政策</h1>
+  <div class="meta">格林达姆（Green Dam）浏览器扩展 · 最后更新：2026-10-31</div>
+
+  <p>本扩展（"格林达姆"）用于过滤网页内容与广告。以下是它在数据处理上的全部行为。</p>
+
+  <h2>我们收集什么</h2>
+  <p><strong>不收集任何数据。</strong>扩展不设账号体系，不上报浏览记录、不发送使用统计、不加载第三方分析脚本。</p>
+
+  <h2>数据在本地如何被使用</h2>
+  <ul>
+    <li>扩展会读取当前标签页的地址，用于：与本地规则比对以决定是否拦截；在拦截页上显示被拦的地址。</li>
+    <li>这些地址只存在于浏览器内存中，关闭标签页即消失，不写入磁盘、不上传到任何服务器。</li>
+    <li>用户添加的"在线订阅"列表、同步结果、以及点过「坚持访问」的域名，保存在浏览器的本地存储（<code>chrome.storage.local</code>）里，不会离开本机。</li>
+  </ul>
+
+  <h2>网络请求</h2>
+  <p>扩展会产生两类网络请求：</p>
+  <ol>
+    <li><strong>获取在线订阅</strong>：仅当用户在设置页主动添加规则地址后才发生，请求只发往该地址本身，与访问记录无关。</li>
+    <li><strong>可选的本地规则服务</strong>：如果用户本机运行了 <code>127.0.0.1:18888</code> 上的配套程序，扩展会向它请求规则、并回报被拦截的地址用于写入用户自己的本地日志。该服务在用户自己的电脑上，数据不出机器；未安装时扩展自动改用内置规则。</li>
+  </ol>
+
+  <h2>第三方</h2>
+  <p>扩展不向任何第三方共享、出售或转让数据。</p>
+
+  <h2>儿童隐私</h2>
+  <p>扩展不收集任何个人信息，因此也不存在收集儿童个人信息的情形。</p>
+
+  <h2>变更</h2>
+  <p>若未来本政策发生变化，会随扩展版本更新并在本页说明。</p>
+
+  <h2>联系方式</h2>
+  <p class="note">邮箱：<strong>you@example.com</strong>　<!-- 换成你自己的邮箱 --></p>
+
+  <footer>Green Dam / 格林达姆 · 本页可自由转载与镜像</footer>
+</main>
+</body>
+</html>
